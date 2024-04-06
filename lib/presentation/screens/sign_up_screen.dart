@@ -91,7 +91,7 @@ class _SginUpScreenState extends State<SginUpScreen> {
                           isLoaded = true;
                           setState(() {});
                           try {
-                            await Authentication.registerUser(email, password);
+                            await Auth.registerUser(email, password);
                             // ignore: use_build_context_synchronously
                             showSnackBar(
                               context,

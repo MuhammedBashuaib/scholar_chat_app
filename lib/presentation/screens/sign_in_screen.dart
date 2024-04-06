@@ -83,7 +83,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         isLoaded = true;
                         setState(() {});
                         try {
-                          await Authentication.loginUser(email, password);
+                          await Auth.loginUser(email, password);
                           // ignore: use_build_context_synchronously
                           Navigator.of(context).pushReplacementNamed(
                               MyRoutes.kChatScreen,

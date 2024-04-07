@@ -1,9 +1,7 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import 'package:scholar_chat_app/const.dart';
-// import 'package:scholar_chat_app/firebase/auth.dart';
 import 'package:scholar_chat_app/helper/show_snack_bar.dart';
 import 'package:scholar_chat_app/presentation/widgets/custom_material_button.dart';
 import 'package:scholar_chat_app/presentation/widgets/custom_text_form_field.dart';
@@ -87,36 +85,7 @@ class _SginUpScreenState extends State<SginUpScreen> {
                     CustomMaterialButton(
                       text: "Sign Up",
                       onPressed: () async {
-                        if (formKey.currentState!.validate()) {
-                          isLoaded = true;
-                          setState(() {});
-                          try {
-                            // await Auth.registerUser(email, password);
-                            // // ignore: use_build_context_synchronously
-                            // showSnackBar(
-                            //   context,
-                            //   "Success.",
-                            // );
-                            // // ignore: use_build_context_synchronously
-                            Navigator.of(context)
-                                .pushNamed(MyRoutes.kSignInScreen);
-                          } on FirebaseAuthException catch (e) {
-                            if (e.code == 'weak-password') {
-                              showSnackBar(context,
-                                  "The password provided is too weak.");
-                            } else if (e.code == 'email-already-in-use') {
-                              showSnackBar(context,
-                                  "The account already exists for that email.");
-                            }
-                          } catch (e) {
-                            showSnackBar(
-                              context,
-                              "There was an error.",
-                            );
-                          }
-                          isLoaded = false;
-                          setState(() {});
-                        }
+                        if (formKey.currentState!.validate()) {}
                       },
                     ),
                     RecordingMessage(

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import 'package:scholar_chat_app/const.dart';
-import 'package:scholar_chat_app/firebase/auth.dart';
+// import 'package:scholar_chat_app/firebase/auth.dart';
 import 'package:scholar_chat_app/helper/show_snack_bar.dart';
 import 'package:scholar_chat_app/presentation/widgets/custom_material_button.dart';
 import 'package:scholar_chat_app/presentation/widgets/custom_text_form_field.dart';
@@ -91,13 +91,13 @@ class _SginUpScreenState extends State<SginUpScreen> {
                           isLoaded = true;
                           setState(() {});
                           try {
-                            await Auth.registerUser(email, password);
-                            // ignore: use_build_context_synchronously
-                            showSnackBar(
-                              context,
-                              "Success.",
-                            );
-                            // ignore: use_build_context_synchronously
+                            // await Auth.registerUser(email, password);
+                            // // ignore: use_build_context_synchronously
+                            // showSnackBar(
+                            //   context,
+                            //   "Success.",
+                            // );
+                            // // ignore: use_build_context_synchronously
                             Navigator.of(context)
                                 .pushNamed(MyRoutes.kSignInScreen);
                           } on FirebaseAuthException catch (e) {

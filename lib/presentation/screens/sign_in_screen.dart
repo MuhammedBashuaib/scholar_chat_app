@@ -1,10 +1,10 @@
-import 'package:firebase_auth/firebase_auth.dart';
+// import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import 'package:scholar_chat_app/const.dart';
-import 'package:scholar_chat_app/firebase/auth.dart';
-import 'package:scholar_chat_app/helper/show_snack_bar.dart';
+// import 'package:scholar_chat_app/firebase/auth.dart';
+// import 'package:scholar_chat_app/helper/show_snack_bar.dart';
 import 'package:scholar_chat_app/presentation/widgets/custom_material_button.dart';
 import 'package:scholar_chat_app/presentation/widgets/custom_text_form_field.dart';
 import 'package:scholar_chat_app/presentation/widgets/custom_title_login.dart';
@@ -80,34 +80,34 @@ class _SignInScreenState extends State<SignInScreen> {
                     text: "Sign In",
                     onPressed: () async {
                       if (formKey.currentState!.validate()) {
-                        isLoaded = true;
-                        setState(() {});
-                        try {
-                          await Auth.loginUser(email, password);
-                          // ignore: use_build_context_synchronously
-                          Navigator.of(context).pushReplacementNamed(
-                              MyRoutes.kChatScreen,
-                              arguments: email);
-                        } on FirebaseAuthException catch (e) {
-                          if (e.code == "user-not-found") {
-                            showSnackBar(
-                              context,
-                              "No user found for that email.",
-                            );
-                          } else if (e.code == "wrong-password") {
-                            showSnackBar(
-                              context,
-                              "Wrong password provided for that user.",
-                            );
-                          }
-                        } catch (e) {
-                          showSnackBar(
-                            context,
-                            "There was an error.",
-                          );
-                        }
-                        isLoaded = false;
-                        setState(() {});
+                        // isLoaded = true;
+                        // setState(() {});
+                        // try {
+                        //   await Auth.loginUser(email, password);
+                        //   // ignore: use_build_context_synchronously
+                        //   Navigator.of(context).pushReplacementNamed(
+                        //       MyRoutes.kChatScreen,
+                        //       arguments: email);
+                        // } on FirebaseAuthException catch (e) {
+                        //   if (e.code == "user-not-found") {
+                        //     showSnackBar(
+                        //       context,
+                        //       "No user found for that email.",
+                        //     );
+                        //   } else if (e.code == "wrong-password") {
+                        //     showSnackBar(
+                        //       context,
+                        //       "Wrong password provided for that user.",
+                        //     );
+                        //   }
+                        // } catch (e) {
+                        //   showSnackBar(
+                        //     context,
+                        //     "There was an error.",
+                        //   );
+                        // }
+                        // isLoaded = false;
+                        // setState(() {});
                       }
                     },
                   ),

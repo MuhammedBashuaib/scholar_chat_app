@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import 'package:scholar_chat_app/const.dart';
-import 'package:scholar_chat_app/cubits/cubit/login_cubit.dart';
+import 'package:scholar_chat_app/cubits/login_cubit/login_cubit.dart';
 import 'package:scholar_chat_app/helper/show_snack_bar.dart';
 import 'package:scholar_chat_app/presentation/widgets/custom_material_button.dart';
 import 'package:scholar_chat_app/presentation/widgets/custom_text_form_field.dart';

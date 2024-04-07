@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:scholar_chat_app/cubits/cubit/login_cubit.dart';
 import 'firebase_options.dart';
+
+import 'package:scholar_chat_app/cubits/login_cubit/login_cubit.dart';
 
 import 'package:scholar_chat_app/const.dart';
 import 'package:scholar_chat_app/presentation/screens/sign_in_screen.dart';
